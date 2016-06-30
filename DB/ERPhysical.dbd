@@ -1,0 +1,563 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Devart (www.devart.com), the Database Diagram File -->
+<!-- Modifying this generated file will probably render it invalid -->
+<DevartDatabaseDiagram>
+  <SchemaVersion>1.2</SchemaVersion>
+  <DatabaseProvider>59f90733-4d68-4fdf-82a7-f0fcbf5460aa</DatabaseProvider>
+  <Connection>
+    <Name>social_web.localhost</Name>
+    <ConnectionString>User Id=super_admin;Host=localhost;Database=social_web;Character Set=utf8</ConnectionString>
+  </Connection>
+  <Settings>
+    <DbDiagramOptions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <CustomProperties />
+    </DbDiagramOptions>
+    <Options xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="PageOptions">
+      <TopLeftMargins>
+        <Width>39.3700787401575 in/100</Width>
+        <Height>39.3700787401575 in/100</Height>
+      </TopLeftMargins>
+      <BottomRightMargins>
+        <Width>39.3700787401575 in/100</Width>
+        <Height>39.3700787401575 in/100</Height>
+      </BottomRightMargins>
+      <PaperSize>
+        <Width>827 in/100</Width>
+        <Height>1169 in/100</Height>
+      </PaperSize>
+    </Options>
+    <Options xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="PrintOptions" />
+    <Options xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="ViewOptions">
+      <ShadowOffset>
+        <X>4 px</X>
+        <Y>4 px</Y>
+      </ShadowOffset>
+      <CustomProperties />
+    </Options>
+  </Settings>
+  <VirtualRelations>
+    <RelationCount>0</RelationCount>
+  </VirtualRelations>
+  <Diagram Version="1.10.0.93">
+    <DiagramModel>
+      <Model xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="RootModel">
+        <CustomProperties>
+          <OID>0</OID>
+        </CustomProperties>
+        <Children>
+          <Model xsi:type="TableModel">
+            <CustomProperties>
+              <OID>1</OID>
+              <Parent>0</Parent>
+            </CustomProperties>
+            <Location>
+              <X>100 px</X>
+              <Y>30 px</Y>
+            </Location>
+            <Size>
+              <Width>196 px</Width>
+              <Height>212 px</Height>
+            </Size>
+            <DbOid>
+              <Path>social_web.user_data</Path>
+              <TypeName>Table</TypeName>
+            </DbOid>
+            <Compartments>
+              <ConstraintsCollapsed>True</ConstraintsCollapsed>
+              <IndexesCollapsed>True</IndexesCollapsed>
+              <TriggersCollapsed>True</TriggersCollapsed>
+            </Compartments>
+          </Model>
+          <Model xsi:type="TableModel">
+            <CustomProperties>
+              <OID>2</OID>
+              <Parent>0</Parent>
+            </CustomProperties>
+            <Location>
+              <X>520 px</X>
+              <Y>330 px</Y>
+            </Location>
+            <Size>
+              <Width>170 px</Width>
+              <Height>127 px</Height>
+            </Size>
+            <DbOid>
+              <Path>social_web.user_profile</Path>
+              <TypeName>Table</TypeName>
+            </DbOid>
+            <Compartments>
+              <ConstraintsCollapsed>True</ConstraintsCollapsed>
+              <IndexesCollapsed>True</IndexesCollapsed>
+              <TriggersCollapsed>True</TriggersCollapsed>
+            </Compartments>
+          </Model>
+          <Model xsi:type="TableModel">
+            <CustomProperties>
+              <OID>3</OID>
+              <Parent>0</Parent>
+            </CustomProperties>
+            <Location>
+              <X>260 px</X>
+              <Y>360 px</Y>
+            </Location>
+            <Size>
+              <Width>120 px</Width>
+              <Height>124 px</Height>
+            </Size>
+            <DbOid>
+              <Path>social_web.user_role</Path>
+              <TypeName>Table</TypeName>
+            </DbOid>
+            <Compartments>
+              <ConstraintsCollapsed>True</ConstraintsCollapsed>
+              <IndexesCollapsed>True</IndexesCollapsed>
+              <TriggersCollapsed>True</TriggersCollapsed>
+            </Compartments>
+          </Model>
+          <Model xsi:type="RelationLinkModel">
+            <CustomProperties>
+              <OID>4</OID>
+              <Comment>5</Comment>
+              <OutModel>3</OutModel>
+              <InModel>2</InModel>
+              <OutPort>6</OutPort>
+              <InPort>7</InPort>
+              <Parent>0</Parent>
+            </CustomProperties>
+            <PortAnchors>
+              <Port>
+                <Location>
+                  <X>0 px</X>
+                  <Y>93 px</Y>
+                </Location>
+                <Anchors>Top Bottom</Anchors>
+                <Align>Right</Align>
+                <CustomProperties>
+                  <OID>6</OID>
+                  <PortType>FloatAnchor</PortType>
+                </CustomProperties>
+              </Port>
+              <Port>
+                <Location>
+                  <X>0 px</X>
+                  <Y>93 px</Y>
+                </Location>
+                <Anchors>Top Bottom</Anchors>
+                <Align>Left</Align>
+                <CustomProperties>
+                  <OID>7</OID>
+                  <PortType>FloatAnchor</PortType>
+                </CustomProperties>
+              </Port>
+            </PortAnchors>
+            <BendPoints>
+              <PointD>
+                <X>400 px</X>
+                <Y>453 px</Y>
+              </PointD>
+              <PointD>
+                <X>400 px</X>
+                <Y>423 px</Y>
+              </PointD>
+            </BendPoints>
+            <IsManuallyRouted>false</IsManuallyRouted>
+            <DbOid>
+              <Path>social_web.user_role.user_role_FK2</Path>
+              <TypeName>ForeignKey</TypeName>
+            </DbOid>
+          </Model>
+          <Model xsi:type="RelationCommentModel">
+            <CustomProperties>
+              <OID>5</OID>
+              <HolderModel>4</HolderModel>
+              <Port>8</Port>
+              <Parent>0</Parent>
+            </CustomProperties>
+            <PortAnchors>
+              <Port xsi:type="LinkPort">
+                <Location>
+                  <X>-80 px</X>
+                  <Y>30 px</Y>
+                </Location>
+                <Anchors>None</Anchors>
+                <Align>Right</Align>
+                <CustomProperties>
+                  <OID>8</OID>
+                  <PortType>FixedAnchor</PortType>
+                </CustomProperties>
+                <LinkPortAnchor>OutPoint</LinkPortAnchor>
+              </Port>
+            </PortAnchors>
+            <CommentOffset>
+              <X>22 px</X>
+              <Y>2 px</Y>
+            </CommentOffset>
+          </Model>
+          <Model xsi:type="TableModel">
+            <CustomProperties>
+              <OID>9</OID>
+              <Parent>0</Parent>
+            </CustomProperties>
+            <Location>
+              <X>0 px</X>
+              <Y>360 px</Y>
+            </Location>
+            <Size>
+              <Width>167 px</Width>
+              <Height>107 px</Height>
+            </Size>
+            <DbOid>
+              <Path>social_web.security_role</Path>
+              <TypeName>Table</TypeName>
+            </DbOid>
+            <Compartments>
+              <ConstraintsCollapsed>True</ConstraintsCollapsed>
+              <IndexesCollapsed>True</IndexesCollapsed>
+              <TriggersCollapsed>True</TriggersCollapsed>
+            </Compartments>
+          </Model>
+          <Model xsi:type="RelationLinkModel">
+            <CustomProperties>
+              <OID>10</OID>
+              <Comment>11</Comment>
+              <OutModel>3</OutModel>
+              <InModel>9</InModel>
+              <OutPort>12</OutPort>
+              <InPort>13</InPort>
+              <Parent>0</Parent>
+            </CustomProperties>
+            <PortAnchors>
+              <Port>
+                <Location>
+                  <X>0 px</X>
+                  <Y>72 px</Y>
+                </Location>
+                <Anchors>Top Bottom</Anchors>
+                <Align>Left</Align>
+                <CustomProperties>
+                  <OID>12</OID>
+                  <PortType>FloatAnchor</PortType>
+                </CustomProperties>
+              </Port>
+              <Port>
+                <Location>
+                  <X>0 px</X>
+                  <Y>52 px</Y>
+                </Location>
+                <Anchors>Top Bottom</Anchors>
+                <Align>Right</Align>
+                <CustomProperties>
+                  <OID>13</OID>
+                  <PortType>FloatAnchor</PortType>
+                </CustomProperties>
+              </Port>
+            </PortAnchors>
+            <BendPoints>
+              <PointD>
+                <X>240 px</X>
+                <Y>432 px</Y>
+              </PointD>
+              <PointD>
+                <X>240 px</X>
+                <Y>412 px</Y>
+              </PointD>
+            </BendPoints>
+            <IsManuallyRouted>false</IsManuallyRouted>
+            <DbOid>
+              <Path>social_web.user_role.user_role_FK1</Path>
+              <TypeName>ForeignKey</TypeName>
+            </DbOid>
+          </Model>
+          <Model xsi:type="RelationCommentModel">
+            <CustomProperties>
+              <OID>11</OID>
+              <HolderModel>10</HolderModel>
+              <Port>14</Port>
+              <Parent>0</Parent>
+            </CustomProperties>
+            <PortAnchors>
+              <Port xsi:type="LinkPort">
+                <Location>
+                  <X>56.5 px</X>
+                  <Y>20 px</Y>
+                </Location>
+                <Anchors>None</Anchors>
+                <Align>Left</Align>
+                <CustomProperties>
+                  <OID>14</OID>
+                  <PortType>FixedAnchor</PortType>
+                </CustomProperties>
+                <LinkPortAnchor>OutPoint</LinkPortAnchor>
+              </Port>
+            </PortAnchors>
+            <CommentOffset>
+              <X>-0.902763366699219 px</X>
+              <Y>-52 px</Y>
+            </CommentOffset>
+          </Model>
+          <Model xsi:type="TableModel">
+            <CustomProperties>
+              <OID>15</OID>
+              <Parent>0</Parent>
+            </CustomProperties>
+            <Location>
+              <X>490 px</X>
+              <Y>180 px</Y>
+            </Location>
+            <Size>
+              <Width>161 px</Width>
+              <Height>127 px</Height>
+            </Size>
+            <DbOid>
+              <Path>social_web.email</Path>
+              <TypeName>Table</TypeName>
+            </DbOid>
+            <Compartments>
+              <ConstraintsCollapsed>True</ConstraintsCollapsed>
+              <IndexesCollapsed>True</IndexesCollapsed>
+              <TriggersCollapsed>True</TriggersCollapsed>
+            </Compartments>
+          </Model>
+          <Model xsi:type="RelationLinkModel">
+            <CustomProperties>
+              <OID>16</OID>
+              <Comment>17</Comment>
+              <OutModel>15</OutModel>
+              <InModel>1</InModel>
+              <OutPort>18</OutPort>
+              <InPort>19</InPort>
+              <Parent>0</Parent>
+            </CustomProperties>
+            <PortAnchors>
+              <Port>
+                <Location>
+                  <X>0 px</X>
+                  <Y>31 px</Y>
+                </Location>
+                <Anchors>Top Bottom</Anchors>
+                <Align>Left</Align>
+                <CustomProperties>
+                  <OID>18</OID>
+                  <PortType>FloatAnchor</PortType>
+                </CustomProperties>
+              </Port>
+              <Port>
+                <Location>
+                  <X>0 px</X>
+                  <Y>181 px</Y>
+                </Location>
+                <Anchors>Top Bottom</Anchors>
+                <Align>Right</Align>
+                <CustomProperties>
+                  <OID>19</OID>
+                  <PortType>FloatAnchor</PortType>
+                </CustomProperties>
+              </Port>
+            </PortAnchors>
+            <IsManuallyRouted>false</IsManuallyRouted>
+            <DbOid>
+              <Path>social_web.email.emailUser_dataFK</Path>
+              <TypeName>ForeignKey</TypeName>
+            </DbOid>
+          </Model>
+          <Model xsi:type="RelationCommentModel">
+            <CustomProperties>
+              <OID>17</OID>
+              <HolderModel>16</HolderModel>
+              <Port>20</Port>
+              <Parent>0</Parent>
+            </CustomProperties>
+            <PortAnchors>
+              <Port xsi:type="LinkPort">
+                <Location>
+                  <X>97 px</X>
+                  <Y>0 px</Y>
+                </Location>
+                <Anchors>None</Anchors>
+                <Align>Left</Align>
+                <CustomProperties>
+                  <OID>20</OID>
+                  <PortType>FixedAnchor</PortType>
+                </CustomProperties>
+                <LinkPortAnchor>OutPoint</LinkPortAnchor>
+              </Port>
+            </PortAnchors>
+            <CommentOffset>
+              <X>22 px</X>
+              <Y>2 px</Y>
+            </CommentOffset>
+          </Model>
+          <Model xsi:type="TableModel">
+            <CustomProperties>
+              <OID>21</OID>
+              <Parent>0</Parent>
+            </CustomProperties>
+            <Location>
+              <X>490 px</X>
+              <Y>10 px</Y>
+            </Location>
+            <Size>
+              <Width>160 px</Width>
+              <Height>144 px</Height>
+            </Size>
+            <DbOid>
+              <Path>social_web.friends</Path>
+              <TypeName>Table</TypeName>
+            </DbOid>
+            <Compartments>
+              <ConstraintsCollapsed>True</ConstraintsCollapsed>
+              <IndexesCollapsed>True</IndexesCollapsed>
+              <TriggersCollapsed>True</TriggersCollapsed>
+            </Compartments>
+          </Model>
+          <Model xsi:type="RelationLinkModel">
+            <CustomProperties>
+              <OID>22</OID>
+              <Comment>23</Comment>
+              <OutModel>21</OutModel>
+              <InModel>1</InModel>
+              <OutPort>24</OutPort>
+              <InPort>25</InPort>
+              <Parent>0</Parent>
+            </CustomProperties>
+            <PortAnchors>
+              <Port>
+                <Location>
+                  <X>0 px</X>
+                  <Y>113 px</Y>
+                </Location>
+                <Anchors>Top Bottom</Anchors>
+                <Align>Left</Align>
+                <CustomProperties>
+                  <OID>24</OID>
+                  <PortType>FloatAnchor</PortType>
+                </CustomProperties>
+              </Port>
+              <Port>
+                <Location>
+                  <X>0 px</X>
+                  <Y>93 px</Y>
+                </Location>
+                <Anchors>Top Bottom</Anchors>
+                <Align>Right</Align>
+                <CustomProperties>
+                  <OID>25</OID>
+                  <PortType>FloatAnchor</PortType>
+                </CustomProperties>
+              </Port>
+            </PortAnchors>
+            <IsManuallyRouted>false</IsManuallyRouted>
+            <DbOid>
+              <Path>social_web.friends.friendsUser_DataFK</Path>
+              <TypeName>ForeignKey</TypeName>
+            </DbOid>
+          </Model>
+          <Model xsi:type="RelationCommentModel">
+            <CustomProperties>
+              <OID>23</OID>
+              <HolderModel>22</HolderModel>
+              <Port>26</Port>
+              <Parent>0</Parent>
+            </CustomProperties>
+            <PortAnchors>
+              <Port xsi:type="LinkPort">
+                <Location>
+                  <X>97 px</X>
+                  <Y>0 px</Y>
+                </Location>
+                <Anchors>None</Anchors>
+                <Align>Left</Align>
+                <CustomProperties>
+                  <OID>26</OID>
+                  <PortType>FixedAnchor</PortType>
+                </CustomProperties>
+                <LinkPortAnchor>OutPoint</LinkPortAnchor>
+              </Port>
+            </PortAnchors>
+            <CommentOffset>
+              <X>22 px</X>
+              <Y>2 px</Y>
+            </CommentOffset>
+          </Model>
+          <Model xsi:type="RelationLinkModel">
+            <CustomProperties>
+              <OID>27</OID>
+              <Comment>28</Comment>
+              <OutModel>21</OutModel>
+              <InModel>1</InModel>
+              <OutPort>29</OutPort>
+              <InPort>30</InPort>
+              <Parent>0</Parent>
+            </CustomProperties>
+            <PortAnchors>
+              <Port>
+                <Location>
+                  <X>0 px</X>
+                  <Y>51 px</Y>
+                </Location>
+                <Anchors>Top Bottom</Anchors>
+                <Align>Left</Align>
+                <CustomProperties>
+                  <OID>29</OID>
+                  <PortType>FloatAnchor</PortType>
+                </CustomProperties>
+              </Port>
+              <Port>
+                <Location>
+                  <X>0 px</X>
+                  <Y>31 px</Y>
+                </Location>
+                <Anchors>Top Bottom</Anchors>
+                <Align>Right</Align>
+                <CustomProperties>
+                  <OID>30</OID>
+                  <PortType>FloatAnchor</PortType>
+                </CustomProperties>
+              </Port>
+            </PortAnchors>
+            <IsManuallyRouted>false</IsManuallyRouted>
+            <DbOid>
+              <Path>social_web.friends.friendsUser_DataFK2</Path>
+              <TypeName>ForeignKey</TypeName>
+            </DbOid>
+          </Model>
+          <Model xsi:type="RelationCommentModel">
+            <CustomProperties>
+              <OID>28</OID>
+              <HolderModel>27</HolderModel>
+              <Port>31</Port>
+              <Parent>0</Parent>
+            </CustomProperties>
+            <PortAnchors>
+              <Port xsi:type="LinkPort">
+                <Location>
+                  <X>97 px</X>
+                  <Y>0 px</Y>
+                </Location>
+                <Anchors>None</Anchors>
+                <Align>Left</Align>
+                <CustomProperties>
+                  <OID>31</OID>
+                  <PortType>FixedAnchor</PortType>
+                </CustomProperties>
+                <LinkPortAnchor>OutPoint</LinkPortAnchor>
+              </Port>
+            </PortAnchors>
+            <CommentOffset>
+              <X>22 px</X>
+              <Y>2 px</Y>
+            </CommentOffset>
+          </Model>
+        </Children>
+        <ViewPort>
+          <ScaleMode>Free</ScaleMode>
+          <Scale>1</Scale>
+          <Location>
+            <X>-64 px</X>
+            <Y>16 px</Y>
+          </Location>
+        </ViewPort>
+      </Model>
+    </DiagramModel>
+  </Diagram>
+</DevartDatabaseDiagram>

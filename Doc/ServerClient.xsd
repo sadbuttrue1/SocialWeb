@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <xsd:element name="root" type="RootType" />
+  
+    <xsd:complexType name="RootType">
+        <xsd:sequence>
+            <xsd:element name="delegations" type="DelegationsType" minOccurs="1" maxOccurs="1"/>
+            <xsd:element name="contest" type="ContestType" minOccurs="1" maxOccurs="1"/> 
+        </xsd:sequence>
+    </xsd:complexType>      
+  
+    <xsd:complexType name="DelegationsType">
+        <xsd:sequence>
+            <xsd:element name="delegation" type="DelegationType" minOccurs="1" maxOccurs="unbounded"/>
+        </xsd:sequence>
+    </xsd:complexType>
+  
+    <xsd:complexType name="DelegationType">
+        <xsd:sequence>
+            <xsd:element name="sportsmen" type="SportsmenType" minOccurs="1" maxOccurs="unbounded"/>          
+        </xsd:sequence>
+        <xsd:attribute name="id" type="xsd:int" use="required"/>
+        <xsd:attribute name="name" type="xsd:string" use="required"/>
+        <xsd:attribute name="manager" type="xsd:string" use="required"/>
+        <xsd:attribute name="country" type="xsd:string" use="required"/>
+        <xsd:attribute name="city" type="xsd:string" use="required"/>
+        <xsd:attribute name="organization" type="xsd:string" use="optional"/>
+        <xsd:attribute name="userIns" type="xsd:string" use="required"/>
+    </xsd:complexType>
+  
+    <xsd:complexType name="SportsmenType">
+        <xsd:attribute name="id" type="xsd:int" use="required"/>
+        <xsd:attribute name="name" type="xsd:string" use="required"/>
+        <xsd:attribute name="surname" type="xsd:string" use="required"/>
+        <xsd:attribute name="patronymic" type="xsd:string" use="required"/>
+        <xsd:attribute name="birthDate" type="xsd:date" use="required"/>
+        <xsd:attribute name="rank" type="xsd:int" use="optional"/>
+        <xsd:attribute name="sex" type="xsd:string" use="required"/>
+        <xsd:attribute name="medical" type="xsd:date" use="optional"/>
+        <xsd:attribute name="lastContest" type="xsd:date" use="optional"/>
+        <xsd:attribute name="insurance" type="xsd:date" use="optional"/>
+        <xsd:attribute name="conSpDelId" type="xsd:int" use="required"/>
+        <xsd:attribute name="status" type="xsd:int" use="optional"/>
+    </xsd:complexType>
+  
+    <xsd:complexType name="ContestType">
+        <xsd:sequence>
+            <xsd:element name="race" type="RaceType" minOccurs="1" maxOccurs="unbounded"/>          
+        </xsd:sequence>
+        <xsd:attribute name="id" type="xsd:int" use="required"/>
+        <xsd:attribute name="name" type="xsd:string" use="required"/>
+        <xsd:attribute name="country" type="xsd:string" use="required"/>
+        <xsd:attribute name="city" type="xsd:string" use="required"/>
+        <xsd:attribute name="adress" type="xsd:string" use="optional"/>
+        <xsd:attribute name="finishAplic" type="xsd:date" use="required"/>
+        <xsd:attribute name="start" type="xsd:date" use="required"/>
+        <xsd:attribute name="finish" type="xsd:date" use="required"/>
+        <xsd:attribute name="statusName" type="xsd:string" use="required"/>
+        <xsd:attribute name="statusOpenOrClose" type="xsd:string" use="optional"/>
+        <xsd:attribute name="statusPrior" type="xsd:int" use="optional"/>
+    </xsd:complexType>
+  
+    <xsd:complexType name="RaceType">
+        <xsd:sequence>
+            <xsd:element name="teams" type="TeamsType" minOccurs="1" maxOccurs="1"/>          
+            <xsd:element name="limits" type="LimitsType" minOccurs="1" maxOccurs="1"/>
+            <xsd:element name="numWomens" type="NumWomensType" minOccurs="1" maxOccurs="1"/>
+        </xsd:sequence>
+        <xsd:attribute name="id" type="xsd:int" use="required"/>
+        <xsd:attribute name="rank" type="xsd:int" use="optional"/>
+        <xsd:attribute name="date" type="xsd:date" use="required"/>
+        <xsd:attribute name="disName" type="xsd:string" use="required"/>
+        <xsd:attribute name="disNote" type="xsd:string" use="optional"/>
+        <xsd:attribute name="disLength" type="xsd:string" use="required"/>
+        <xsd:attribute name="disNumParty" type="xsd:int" use="required"/>
+    </xsd:complexType>
+  
+    <xsd:complexType name="TeamsType">
+        <xsd:sequence>
+            <xsd:element name="team" type="TeamType" minOccurs="1" maxOccurs="unbounded"/>          
+        </xsd:sequence>
+    </xsd:complexType>
+  
+    <xsd:complexType name="LimitsType">
+        <xsd:sequence>
+            <xsd:element name="limit" type="LimitsType" minOccurs="1" maxOccurs="unbounded"/>          
+        </xsd:sequence>
+    </xsd:complexType>
+  
+    <xsd:complexType name="NumWomensType">
+        <xsd:sequence>
+            <xsd:element name="numWomen" type="NumWomenType" minOccurs="1" maxOccurs="unbounded"/>          
+        </xsd:sequence>
+    </xsd:complexType>
+  
+    <xsd:complexType name="TeamType">
+        <xsd:sequence>
+            <xsd:element name="composition" type="CompositionType" minOccurs="1" maxOccurs="unbounded"/>
+            <xsd:element name="protocol" type="ProtocolType" minOccurs="0" maxOccurs="unbounded"/>
+        </xsd:sequence>
+        <xsd:attribute name="id" type="xsd:int" use="required"/>
+        <xsd:attribute name="num" type="xsd:int" use="required"/>
+        <xsd:attribute name="name" type="xsd:string" use="required"/>
+        <xsd:attribute name="status" type="xsd:int" use="optional"/>
+    </xsd:complexType>
+  
+    <xsd:complexType name="CompositionType">
+        <xsd:attribute name="conSpDelId" type="xsd:int" use="required"/>
+        <xsd:attribute name="status" type="xsd:int" use="required"/>
+    </xsd:complexType>
+    
+    <xsd:complexType name="ProtocolType">
+        <xsd:attribute name="time" type="xsd:dateTime" use="optional"/>
+        <xsd:attribute name="fine" type="xsd:int" use="optional"/>
+        <xsd:attribute name="removal" type="xsd:int" use="optional"/>
+        <xsd:attribute name="teamId" type="xsd:int" use="required"/>
+        <xsd:attribute name="name" type="xsd:string" use="required"/>
+    </xsd:complexType>
+      
+  
+    <xsd:complexType name="LimitType">
+        <xsd:attribute name="id" type="xsd:int" use="required"/>
+        <xsd:attribute name="class" type="xsd:int" use="required"/>
+        <xsd:attribute name="spRank" type="xsd:int" use="required"/>
+        <xsd:attribute name="group" type="xsd:string" use="required"/>
+        <xsd:attribute name="ageFrom" type="xsd:int" use="required"/>
+        <xsd:attribute name="ageTo" type="xsd:int" use="required"/>
+    </xsd:complexType>
+      
+  
+    <xsd:complexType name="NumWomenType">
+        <xsd:attribute name="countWomen" type="xsd:int" use="required"/>
+    </xsd:complexType>
+  
+</xsd:schema>

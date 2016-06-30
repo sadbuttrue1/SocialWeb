@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC
+    "-//Hibernate/Hibernate Configuration DTD//EN"
+    "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+	<session-factory>
+		<mapping class="com.socialweb.domain.UserData" />  
+                <!--<mapping class="com.socialweb.domain.LightUserData" />-->
+                <mapping class="com.socialweb.domain.UserProfile" />                        
+                <mapping class="com.socialweb.domain.EmailUserData" />
+                <mapping class="com.socialweb.domain.UserProfileRole" />
+                <mapping class="com.socialweb.domain.Friend" />
+                <mapping class="com.socialweb.domain.Chat" />
+                <mapping class="com.socialweb.domain.Message" />
+	</session-factory>      
+</hibernate-configuration>

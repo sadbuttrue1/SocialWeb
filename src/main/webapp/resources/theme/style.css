@@ -1,0 +1,174 @@
+html, body{    
+    margin:0;
+    padding:0;
+    height:100%;
+    position:relative;
+}
+footer{    
+    background-color: #dddddd;
+    text-align: center;  
+    //width: 100%;
+}
+header{
+    width: 100%;    
+    background-color: #eeeeee;
+    text-align: center;
+
+}
+
+#body{
+    //display: block;
+    float: left;
+    width: 100%;    
+    position: relative;    
+    padding: 1%;
+    //margin: 3%;
+    min-height: 85%;          
+    background: rgb(130,176,255);
+    border-radius: 10px;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+}
+
+#chatListFull{   
+    float: left;
+    min-height: 85%;
+}
+
+#bodyNav{
+    float: left;
+    //width: 80px;
+    min-height: 20%;
+    float: left;
+    height: 100px;
+    border-right: 2px groove #eeeeee;
+    border-bottom: 2px groove #eeeeee;
+    margin: 10px;
+}
+
+#bodyNav li{
+    list-style-type: none;
+}
+
+#bodyNav a{
+    color: rgb(0,0,0);
+}
+#bodyNav a:hover{
+    background: white;
+}
+
+#bodyNav ol{
+    margin-left: 0;
+    padding-left: 0;
+}
+
+#formLogin{
+    //float: right;
+}
+#map{
+    width: 400px; 
+    height: 200px;
+    border: 2px solid rgb(0,0,0);
+}
+
+.error{
+    color:red;
+}
+
+.ok{
+    color:green;
+}
+
+#avatar{
+    float: left;
+    margin: 10px 20px 
+}
+
+#information{
+    float: left;
+}
+
+#serch{
+    float: left;
+    width: 300px;
+}
+
+#searchResult{
+    float: left;
+    width: 500px;
+    margin: 10px 30px;
+}
+
+.divSearchUserData{
+    border-bottom: 2px solid white;
+    height: 110px;
+}
+
+.avatarSearch{
+    float:left; /* Выравнивание по левому краю */
+    margin: 7px 7px 0px 0; /* Отступы вокруг картинки */
+}
+
+#settings{
+    width: 400px;
+    float: left;
+}
+.none{
+    display: none;
+}
+.chatsList{
+    border-bottom: 2px solid white;
+    height: 110px;
+}
+.chatsList:hover{
+    background: #83EFFF;
+    cursor: pointer;        
+}
+
+#chat{
+    float: left;
+    width: 500px;
+    height: 100%;
+    border: 2px groove white;
+    position:relative;
+    top:0;
+    left:0;
+}
+
+#messageList{
+    height: 80%;
+    overflow: auto;
+    width: 490px;
+}
+
+
+
+
+
+/*.message{
+    display: block;    
+}*/
+.message:hover{
+    background: #83EFFF;
+    cursor: pointer;
+}
+
+#inputMessages{
+    position:absolute;
+    bottom:2px;
+    left:10px;        
+}
+#text{
+    width: 480px;
+    height: 50px;
+}
+
+#newChat{
+    float: left;
+    width: 500px;
+    height: 20%;
+    border: 2px groove white;
+    position:relative;
+    top:0;
+    left:0;
+}
