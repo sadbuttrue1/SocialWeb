@@ -28,8 +28,7 @@ public class UserManagerImpl implements UserManager{
             authorities.add(new SimpleGrantedAuthority(role.getRole()));
         }
 
-        User user = new User(userEntity.getId(), username, userEntity.getPassword(), authorities, true,
+        return new User(userEntity.getId(), username, userEntity.getPassword(), authorities, true,
           true, true, true);
-        return user;
     }  
 }

@@ -92,7 +92,7 @@ public class UserServiceImpl implements UserService {
             }    
             
             // присвоение новому пользователю стандартной роли
-            Set<UserProfileRole> userRoles = new HashSet();
+            Set<UserProfileRole> userRoles = new HashSet<>();
             userRoles.add(userProfileRoleDAO.getRoleByName(ROLE_USER));
             
             // создание нового профиля
@@ -130,11 +130,7 @@ public class UserServiceImpl implements UserService {
     @Override
     public boolean findBySameProfileLink(UserData userData) {
         UserData ud = userDataDAO.findByProfileLink(userData.getProfileLink());
-        if (ud == null) {
-            return false;
-        } else {
-            return ud.getId() != userData.getId();
-        }
+        return ud != null && ud.getId() != userData.getId();
 
     }
 
