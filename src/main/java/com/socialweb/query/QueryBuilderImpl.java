@@ -1,8 +1,8 @@
 package com.socialweb.query;
 
 import com.mysema.query.QueryModifiers;
-import com.mysema.query.hql.HQLQuery;
-import com.mysema.query.hql.hibernate.HibernateQuery;
+import com.mysema.query.jpa.hibernate.HibernateQuery;
+import com.mysema.query.jpa.JPQLQuery;
 import com.socialweb.domain.QEmailUserData;
 import com.socialweb.domain.QUserData;
 import com.socialweb.domain.UserData;
@@ -25,7 +25,7 @@ public class QueryBuilderImpl implements QueryBuilder {
 
     @Override
     public List<UserData> buildSearchQuery(SearchForm searchForm) {
-        HQLQuery query = new HibernateQuery(sessionFactory.getCurrentSession())
+        JPQLQuery query = new HibernateQuery(sessionFactory.getCurrentSession())
                 .from(userData).innerJoin(userData.emails, emailUserData);
 
         query = parseLike(query, searchForm);
@@ -33,11 +33,11 @@ public class QueryBuilderImpl implements QueryBuilder {
         query = parseEquals(query, searchForm);
         QueryModifiers qm = new QueryModifiers(20L, 0L);
 
-        return query.restrict(qm).listDistinct(userData);
+        return query.restrict(qm).distinct().list(userData);
 
     }
 
-    private HQLQuery parseLike(HQLQuery query, SearchForm searchForm) {
+    private JPQLQuery parseLike(JPQLQuery query, SearchForm searchForm) {
         if (!searchForm.getName().equals("")) {
             query.where(userData.name.like("%" + searchForm.getName() + "%"));
         }
@@ -50,7 +50,7 @@ public class QueryBuilderImpl implements QueryBuilder {
         return query;
     }
 
-    private HQLQuery parseDate(HQLQuery query, SearchForm searchForm) {
+    private JPQLQuery parseDate(JPQLQuery query, SearchForm searchForm) {
         if (searchForm.getAgeTo() > 0) {
             Calendar dateFrom = Calendar.getInstance();
             Calendar dateTo = Calendar.getInstance();
@@ -66,7 +66,7 @@ public class QueryBuilderImpl implements QueryBuilder {
         return query;
     }
 
-    private HQLQuery parseEquals(HQLQuery query, SearchForm searchForm) {
+    private JPQLQuery parseEquals(JPQLQuery query, SearchForm searchForm) {
         if (!searchForm.getEmail().equals("")) {
             return query.where(emailUserData.email.equalsIgnoreCase(searchForm.getEmail()));
         }
