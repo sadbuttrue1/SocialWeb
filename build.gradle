@@ -1,5 +1,6 @@
 apply plugin: 'java'
 apply plugin: 'maven'
+apply plugin: "jacoco"
 
 group = 'com.socialweb'
 version = '1.0.0-BUILD-SNAPSHOT'
@@ -73,3 +74,7 @@ exclude(module: 'jmxri')
 sourceSets.main.compileClasspath += configurations.providedCompile
 sourceSets.test.compileClasspath += configurations.providedCompile
 sourceSets.test.runtimeClasspath += configurations.providedCompile
+
+jacoco {
+    toolVersion = "0.7.7.201606060606"
+}
