@@ -29,6 +29,7 @@ public class UserDataDAOImplTest {
     }
 
     @Test
+    @Ignore
     public void testFindById() {
         UserData userData = userDataDAO.findById(1);
         assertNotNull(userData); 
@@ -36,6 +37,7 @@ public class UserDataDAOImplTest {
     }
 
     @Test
+    @Ignore
     public void testFindByIdWhereTime() {
         UserData userData = userDataDAO.findById(1);
         assertNotNull(userData); 
