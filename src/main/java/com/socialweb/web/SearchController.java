@@ -7,10 +7,6 @@ import com.socialweb.form.SearchForm;
 import com.socialweb.form.SearchValidator;
 import com.socialweb.service.UserService;
 import com.socialweb.utility.Help;
-import java.util.Collection;
-import java.util.List;
-import java.util.Locale;
-import org.springframework.asm.commons.Method;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -18,6 +14,9 @@ import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+
+import java.util.List;
+import java.util.Locale;
 
 @Controller
 @RequestMapping(value = "/search")
