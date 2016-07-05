@@ -1,0 +1,1 @@
+[![Build Status](https://travis-ci.org/sadbuttrue1/SocialWeb.svg?branch=master)](https://travis-ci.org/sadbuttrue1/SocialWeb)
