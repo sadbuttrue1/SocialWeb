@@ -1,0 +1,13 @@
+<Configure class="org.eclipse.jetty.webapp.WebAppContext">
+    <New id="DS1" class="org.eclipse.jetty.plus.jndi.Resource">
+        <Arg>jdbc/SocialWeb</Arg>
+        <Arg>
+            <New class="com.mchange.v2.c3p0.ComboPooledDataSource">
+                <Set name="driverClass">com.mysql.jdbc.Driver</Set>
+                <Set name="jdbcUrl">jdbc:mysql://localhost:3306/social_web</Set>
+                <Set name="user">super_admin</Set>
+                <Set name="password">q0w1e2r3t4y5</Set>
+            </New>
+        </Arg>
+    </New>
+</Configure>
